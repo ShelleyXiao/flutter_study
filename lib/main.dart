@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'widgets/index.dart';
+import 'routes/index.dart';
 
 void main() {
   runApp(MyApp());
@@ -69,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
         trailing: Icon(Icons.keyboard_arrow_right),
         onTap: () => _openPage(context, page),
       );
-    });
+    }).toList();
   }
 
   @override
