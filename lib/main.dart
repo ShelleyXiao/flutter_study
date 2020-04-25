@@ -94,11 +94,28 @@ class _MyHomePageState extends State<MyHomePage> {
 //              PageInfo("Context测试", (ctx) => ContextRoute(), withScaffold: false),
 //              PageInfo("Widget树中获取State对象", (ctx) => RetrieveStateRoute(), withScaffold: false),
               PageInfo("文本、字体样式", (ctx) => TextRoute()),
-//              PageInfo("按钮", (ctx) => ButtonRoute()),
-//              PageInfo("图片伸缩", (ctx) => ImageAndIconRoute()),
-//              PageInfo("单选开关和复选框", (ctx) => SwitchAndCheckBoxRoute()),
-//              PageInfo("输入框",(ctx)=>FocusTestRoute()),
-//              PageInfo("进度条", (ctx) => ProgressRoute()),
+              PageInfo("按钮", (ctx) => ButtonRoute()),
+              PageInfo("图片伸缩", (ctx) => ImageAndIconRoute()),
+              PageInfo("单选开关和复选框", (ctx) => SwitchAndCheckBoxRoute()),
+              PageInfo("输入框",(ctx)=>FocusTestRoute()),
+              PageInfo("进度条", (ctx) => ProgressRoute()),
+            ]),
+          ),
+          ExpansionTile(
+            title: Text("布局类组件"),
+            children: _generateItem(context, [
+              PageInfo("Column居中", (ctx) => CenterColumnRoute()),
+              PageInfo("表格布局", (ctx) => TableRoute()),
+              PageInfo("对齐及相对定位", (ctx) => AlignRoute()),
+            ]),
+          ),
+          ExpansionTile(
+            title: Text("容器类组件"),
+            children: _generateItem(context, [
+              PageInfo("填充Padding", (ctx)=>PaddingRoute()),
+              PageInfo("尺寸限制类容器", (ctx)=>SizeConstraintsRoute(), withScaffold: false),
+              PageInfo("装饰器容器", (ctx)=>DecorateboRoute())
+
             ]),
           ),
         ],
