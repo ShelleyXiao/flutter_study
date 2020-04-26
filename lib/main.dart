@@ -114,8 +114,16 @@ class _MyHomePageState extends State<MyHomePage> {
             children: _generateItem(context, [
               PageInfo("填充Padding", (ctx)=>PaddingRoute()),
               PageInfo("尺寸限制类容器", (ctx)=>SizeConstraintsRoute(), withScaffold: false),
-              PageInfo("装饰器容器", (ctx)=>DecorateboRoute())
-
+              PageInfo("装饰器容器", (ctx)=>DecorateboRoute()),
+              PageInfo("Scaffold, tab", (ctx)=>ScaffoldRoute(), withScaffold: false),
+              PageInfo("clip", (ctx) => ClipRoute())
+            ]),
+          ),
+          ExpansionTile(
+            title: Text("滚动控件"),
+            children: _generateItem(context, [
+              PageInfo("single child scroll", (ctx) => SingleChildScrolViewTestRoute()),
+              PageInfo("listView", (ctx) => InfiniteListView()),
             ]),
           ),
         ],
